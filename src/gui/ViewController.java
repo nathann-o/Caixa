@@ -12,11 +12,8 @@ import javafx.scene.control.TextField;
 public class ViewController {
 	
 	@FXML
-	private TextField txtNumber1;
-	
-	@FXML
-	private TextField txtNumber2;
-	
+	private TextField valorRecebido;
+		
 	@FXML
 	private Label labelResult;
 	
@@ -24,13 +21,13 @@ public class ViewController {
 	private Button btSum;
 	
 	@FXML
-	public void onBtSumAction() {
+	public void onBtSubAction() {
 		try {
 			Locale.setDefault(Locale.US);
-			double number1 = Double.parseDouble(txtNumber1.getText());
-			double number2 = Double.parseDouble(txtNumber2.getText());
-			double sum = number1 + number2;
-			labelResult.setText(String.format("%.2f", sum));
+			double number1 = Double.parseDouble(valorRecebido.getText());
+			double number2 = 200;
+			double sub = number1 - number2;
+			labelResult.setText(String.format("R$ %.2f", sub));
 		}
 		catch(NumberFormatException e){
 			Alerts.showAlert("Erro", null, e.getMessage(), AlertType.ERROR);

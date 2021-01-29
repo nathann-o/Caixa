@@ -11,10 +11,10 @@
 <AnchorPane prefHeight="500.0" prefWidth="754.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ViewController">
    <children>
       <Label layoutX="145.0" layoutY="88.0" prefHeight="17.0" prefWidth="45.0" text="Produto" textAlignment="CENTER" textFill="#222020" />
-      <TextField fx:id="txtNumber1" layoutX="93.0" layoutY="126.0" promptText="Código de barras" />
-      <TextField fx:id="txtNumber2" layoutX="93.0" layoutY="168.0" prefHeight="25.0" prefWidth="77.0" promptText="Quantidade" />
-      <Button fx:id="btSum" layoutX="93.0" layoutY="225.0" mnemonicParsing="false" onAction="#onBtSumAction" text="Adicionar" />
-      <Label fx:id="labelResult" layoutX="228.0" layoutY="287.0" prefHeight="17.0" prefWidth="59.0" />
+      <TextField layoutX="93.0" layoutY="126.0" promptText="Código de barras" />
+      <TextField layoutX="93.0" layoutY="168.0" prefHeight="25.0" prefWidth="77.0" promptText="Quantidade" />
+      <Button layoutX="93.0" layoutY="225.0" mnemonicParsing="false" text="Adicionar" />
+      <Label fx:id="labelResult" layoutX="679.0" layoutY="406.0" prefHeight="17.0" prefWidth="59.0" />
       <Label layoutX="310.0" layoutY="25.0" prefHeight="56.0" prefWidth="135.0" text="Caixa 1" textAlignment="CENTER">
          <font>
             <Font size="39.0" />
@@ -41,13 +41,12 @@
          </font>
       </Label>
       <Label layoutX="468.0" layoutY="406.0" prefHeight="17.0" prefWidth="18.0" text="R$" />
-      <TextField layoutX="499.0" layoutY="402.0" prefHeight="25.0" prefWidth="45.0" promptText="0,00" />
+      <TextField fx:id="valorRecebido" layoutX="499.0" layoutY="402.0" prefHeight="25.0" prefWidth="67.0" promptText="0,00" />
       <Label layoutX="693.0" layoutY="381.0" prefHeight="25.0" prefWidth="45.0" text="Troco">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="693.0" layoutY="406.0" prefHeight="17.0" prefWidth="45.0" text="R$ 0,00" />
-      <Button layoutX="602.0" layoutY="402.0" mnemonicParsing="false" text="Calcular" />
+      <Button fx:id="btSum" layoutX="602.0" layoutY="402.0" mnemonicParsing="false" onAction="#onBtSubAction" text="Calcular" />
    </children>
 </AnchorPane>
