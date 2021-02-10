@@ -2,6 +2,9 @@ package application;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.Statement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import db.DB;
 import javafx.application.Application;
@@ -25,7 +28,7 @@ public class Main extends Application {
 
 	public static void main(String[] args) {
 		launch(args);
-		Connection conn = DB.getConnection();
-		DB.closeConnection();
+		
+		
 	}
 }
